@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	
+	<bean id="userDao" class="com.scme.Dao.UserDao">
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	     <property name="poName" value="com.scme.entity.Usertbl"></property>
+	</bean>
+	
+	<bean id="orderDao" class="com.scme.Dao.OrderDao">
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	     <property name="poName" value="com.scme.entity.Ordertbl"></property>
+	</bean>
+	
+	<bean id="tableDao" class="com.scme.Dao.TableDao">
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	     <property name="poName" value="com.scme.entity.Tabletbl"></property>  
+	</bean>
+	<bean id="menuDao" class="com.scme.Dao.MenuDao">
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	     <property name="poName" value="com.scme.entity.Menutbl"></property>
+	</bean>
+	<bean id="detailDao" class="com.scme.Dao.OrderdetailDao"> 
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	     <property name="poName" value="com.scme.entity.Orderdetailtbl"></property>
+	 </bean>
+</beans>

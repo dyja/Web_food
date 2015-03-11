@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	   <bean id="userBiz" class="com.scme.Biz.UserBiz">
+	        <property name="userdao" ref="userDao"></property>
+	   </bean>
+	   
+	   <bean id="orderBiz" class="com.scme.Biz.OrderBiz">
+	        <property name="orderdao" ref="orderDao"></property>
+	   </bean>
+	   
+	   <bean id="tableBiz" class="com.scme.Biz.TableBiz">
+	       <property name="tabledao" ref="tableDao"></property>
+	   </bean>
+	   <bean id="menuBiz" class="com.scme.Biz.MenuBiz">
+	       <property name="menudao" ref="menuDao"></property>
+	   </bean>
+	   <bean id="DetailBiz" class="com.scme.Biz.OrderdetailBiz">
+	       <property name="detaildao" ref="detailDao"></property>
+	   </bean>
+</beans>

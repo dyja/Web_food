@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+    <struts>
+        <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+        <constant name="struts.objectFactory" value="spring"></constant>
+        <package name="default" extends="struts-default">
+             <action name="users" class="userAction">
+                 <result name="error1">users/error.jsp</result>
+             </action>
+             <action name="table" class="tableAction">
+                <result name="error2">users/error.jsp</result>
+             </action>
+             <action name="menu" class="menuaction">
+             </action>
+             <action name="order" class="orderAction"></action>
+             <action name="detail" class="detailAction"></action>
+        </package>
+    </struts>
